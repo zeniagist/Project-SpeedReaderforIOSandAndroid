@@ -12,7 +12,21 @@ $(function(){
   $("#error").hide();
 
   // Click on Start Reading
-  
+  $("#start").click(function(){
+    // get text and split words into array
+    // \s will match spaces, tabs, new lines, etc and + means one or more
+    myArray = $("#userInput").val().split(/\s+/);
+
+    // get number of words
+    inputLength = myArray.length;
+
+    if(inputLength>1){//input text has more than 2 words
+
+    }else{//input text has 1 word or less
+      // show error message
+      $("#error").show();
+    }
+  });
 
   // Click on New
 
