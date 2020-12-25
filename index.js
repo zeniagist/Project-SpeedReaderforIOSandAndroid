@@ -1,7 +1,6 @@
 $(function(){
   // declare variables
-  var myArray;
-  var inputLength;
+  var myArray, inputLength, counter, action, frequency;
   var reading = false;
 
   // hide buttons, sliders, word reader, and error message
@@ -25,16 +24,25 @@ $(function(){
       // move to reading mode
       reading = true;
 
-      // show new and pause buttons, sliders, and word reader
+      // show new and pause buttons and sliders
       $("#new").show();
       $("#pause").show();
       $("#sliders").show();
-      $("#reader").show();
 
-      // hide textarea and start reading button
+      // hide textarea, start reading button, and error message (hide only if user entered 1 word or less before)
       $("#userInput").hide();
       $("#start").hide();
       $("#error").hide();
+
+      // set the progress slider max
+      $("#progressslider").attr("max", inputLength-1);
+
+      // start counter at zero
+      counter = 0;
+
+      // show word reader with first word   
+      $("#reader").show().text(myArray[counter]);
+
     }else{//input text has 1 word or less
       // show error message
       $("#error").show();
