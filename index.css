@@ -1,5 +1,5 @@
 /********************
- Page 1 
+ Home Page 
 ********************/
 /* Background Image */
 #page1{
@@ -7,6 +7,7 @@
   background-size: 100% 100%;
   color: #ffff;
   text-align: center;
+  font-family: 'Lobster Two', cursive;
 }
 
 /* Error Message */
