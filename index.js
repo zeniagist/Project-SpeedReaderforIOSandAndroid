@@ -85,8 +85,20 @@ $(function(){
     $("#resume").hide();
   });
 
-
   // Change Font Size
+  $("#fontsizeslider").on("slidestop", function(event, ui){
+    // refresh slider
+    $(this).slider("refresh");
+
+    // get value of the slider
+    var slidervalue = parseInt($(this).val());
+
+    // change font size of text
+    $("#reader").css("fontSize", slidervalue);
+
+    // change font size text to match font size
+    $("#fontsize").text(slidervalue);
+  });
   
   // Change Speed
 
