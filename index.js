@@ -1,7 +1,8 @@
 $(function(){
   // declare variables
-  var myArray, inputLength, counter, action, frequency;
+  var myArray, inputLength, counter, action;
   var reading = false;
+  var frequency = 200;
 
   // hide buttons, sliders, word reader, and error message
   $("#new").hide();
@@ -44,7 +45,7 @@ $(function(){
       $("#reader").show().text(myArray[counter]);
 
       // start reading from the first word
-      action = setInterval(read, 5000);
+      action = setInterval(read, frequency);
 
     }else{//input text has 1 word or less
       // show error message
@@ -84,6 +85,8 @@ $(function(){
       // get word
       $("#reader").text(myArray[counter]);
 
+      // changing the progress slider value and refresh
+      $("#progressslider").val(counter).slider('refresh');
     }
   }
 });
