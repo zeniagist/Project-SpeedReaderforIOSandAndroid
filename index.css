@@ -1,5 +1,18 @@
-/* Background Image - Page 1 */
+/********************
+ Page 1 
+********************/
+/* Background Image */
 #page1{
   background: url("https://cdn.pixabay.com/photo/2017/05/10/15/05/himalayas-2301040_960_720.jpg") center center fixed;
   background-size: 100% 100%;
+  color: #ffff;
+  text-align: center;
+}
+
+/* Error Message */
+#error{
+  background-color: #E47F77;
+  width: 50%;
+  margin: 20px auto;
+  font-size: 20px;
 }
