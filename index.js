@@ -43,6 +43,9 @@ $(function(){
       // show word reader with first word   
       $("#reader").show().text(myArray[counter]);
 
+      // start reading from the first word
+      action = setInterval(read, 5000);
+
     }else{//input text has 1 word or less
       // show error message
       $("#error").show();
@@ -62,4 +65,25 @@ $(function(){
   // Progress Slider
 
   // functions
+
+  // read user input text
+  function read(){
+    if(counter == inputLength-1){//last word
+      // stop counter
+      clearInterval(action);
+
+      // stop reading mode
+      reading = false;
+
+      // hide pause button
+      $("#pause").hide();
+    }else{//all words but last word
+      // counter goes up by one
+      counter++;
+
+      // get word
+      $("#reader").text(myArray[counter]);
+
+    }
+  }
 });
