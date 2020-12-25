@@ -2,6 +2,7 @@ $(function(){
   // declare variables
   var myArray;
   var inputLength;
+  var reading = false;
 
   // hide buttons, sliders, word reader, and error message
   $("#new").hide();
@@ -21,7 +22,19 @@ $(function(){
     inputLength = myArray.length;
 
     if(inputLength>1){//input text has more than 2 words
+      // move to reading mode
+      reading = true;
 
+      // show new and pause buttons, sliders, and word reader
+      $("#new").show();
+      $("#pause").show();
+      $("#sliders").show();
+      $("#reader").show();
+
+      // hide textarea and start reading button
+      $("#userInput").hide();
+      $("#start").hide();
+      $("#error").hide();
     }else{//input text has 1 word or less
       // show error message
       $("#error").show();
