@@ -53,16 +53,22 @@
           <!-- Font Size Slider -->
           <div class="ui-block-a">
             <form class="full-width-slider">                
-                <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
+                <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5"        data-highlight="true">
             </form>
           </div>
           <!-- Speed Slider -->
           <div class="ui-block-b">
             <form class="full-width-slider">
-                <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
+                <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50"            data-highlight="true">
             </form>
           </div>
         </div>
+
+        <!-- Progress Slider -->
+        <form class="full-width-slider">
+            <label for="progressslider">PROGRESS: <span id="percentage">0</span>%</label>
+            <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0"                       data-highlight="true">
+        </form>
 
         <!-- Word Reader -->
         <div id="result">word</div>
