@@ -1,9 +1,18 @@
 $(function(){
   // declare variables
+  var myArray;
+  var inputLength;
 
-  // on page load hide elements we don'ts need, leave only text area and start button
+  // hide buttons, sliders, word reader, and error message
+  $("#new").hide();
+  $("#pause").hide();
+  $("#resume").hide();
+  $("#sliders").hide();
+  $("#reader").hide();
+  $("#error").hide();
 
   // Click on Start Reading
+  
 
   // Click on New
 
@@ -18,4 +27,4 @@ $(function(){
   // Progress Slider
 
   // functions
-})
+});

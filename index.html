@@ -32,46 +32,51 @@
           <p>For an efficient reading experience</p>
         </div>
 
-        <!-- Font size and Speed Text -->
-        <div class="ui-grid-a">
-          <!-- Font Size Text -->
-          <div class="ui-block-a">
-            <div>
-              FONT SIZE: <span id="fontsize">50</span> px.
+        <!-- Sliders -->
+        <div id="sliders">
+
+          <!-- Font size and Speed Text -->
+          <div class="ui-grid-a">
+            <!-- Font Size Text -->
+            <div class="ui-block-a">
+              <div>
+                FONT SIZE: <span id="fontsize">50</span> px.
+              </div>
+            </div>
+            <!-- Speed Text -->
+            <div class="ui-block-b">
+              <div>
+                <span id="speed">300</span> WORDS PER MINUTE
+              </div>
             </div>
           </div>
-          <!-- Speed Text -->
-          <div class="ui-block-b">
-            <div>
-              <span id="speed">300</span> WORDS PER MINUTE
+
+          <!-- Font Size and Speed Sliders -->
+          <div class="ui-grid-a">
+            <!-- Font Size Slider -->
+            <div class="ui-block-a">
+              <form class="full-width-slider">                
+                  <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
+              </form>
+            </div>
+            <!-- Speed Slider -->
+            <div class="ui-block-b">
+              <form class="full-width-slider">
+                  <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
+              </form>
             </div>
           </div>
-        </div>
 
-        <!-- Font Size and Speed Sliders -->
-        <div class="ui-grid-a">
-          <!-- Font Size Slider -->
-          <div class="ui-block-a">
-            <form class="full-width-slider">                
-                <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
-            </form>
-          </div>
-          <!-- Speed Slider -->
-          <div class="ui-block-b">
-            <form class="full-width-slider">
-                <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
-            </form>
-          </div>
-        </div>
+          <!-- Progress Slider -->
+          <form class="full-width-slider">
+              <label for="progressslider">PROGRESS: <span id="percentage">0</span>%</label>
+              <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
+          </form>
 
-        <!-- Progress Slider -->
-        <form class="full-width-slider">
-            <label for="progressslider">PROGRESS: <span id="percentage">0</span>%</label>
-            <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
-        </form>
+        </div>
 
         <!-- Word Reader -->
-        <div id="result">word</div>
+        <div id="reader">word</div>
 
         <!-- Error Message -->
         <div id="error">
