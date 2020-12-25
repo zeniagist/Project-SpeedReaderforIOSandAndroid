@@ -2,7 +2,7 @@ $(function(){
   // declare variables
   var myArray, inputLength, counter, action;
   var reading = false;
-  var frequency = 200;
+  var frequency = 1000;
 
   // hide buttons, sliders, word reader, and error message
   $("#new").hide();
@@ -85,8 +85,11 @@ $(function(){
       // get word
       $("#reader").text(myArray[counter]);
 
-      // changing the progress slider value and refresh
+      // change the progress slider value and refresh
       $("#progressslider").val(counter).slider('refresh');
+
+      // change the progress percentage
+      $("#percentage").text(Math.floor(counter/(inputLength-1)*100));
     }
   }
 });
