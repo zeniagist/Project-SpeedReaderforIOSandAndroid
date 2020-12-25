@@ -124,6 +124,30 @@ $(function(){
   });
 
   // Progress Slider
+  $("#progressslider").on("slidestop", function(event, ui){
+    // refresh slider
+    $(this).slider("refresh");
+
+    // get value of the slider
+    var slidervalue = parseInt($(this).val());
+
+    // stop reading
+    clearInterval(action);
+
+    // change counter
+    counter = slidervalue;
+
+    // change word
+    $("#reader").text(myArray[counter]);
+
+    // change value progress percentage
+     $("#percentage").text(Math.floor(counter/(inputLength-1)*100));
+
+    // resume reading if in reading mode
+    if(reading){
+      action = setInterval(read, frequency);
+    }
+  });
 
   /*************
     Functions 
