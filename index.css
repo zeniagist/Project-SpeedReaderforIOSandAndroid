@@ -10,12 +10,9 @@
   font-family: 'Lobster Two', cursive;
 }
 
-/* Error Message */
-#error{
-  background-color: #E47F77;
-  width: 50%;
-  margin: 20px auto;
-  font-size: 20px;
+/* Font Size and Speed Sliders */
+.full-width-slider input{
+  display: none !important;
 }
 
 /* Word Reader */
@@ -23,4 +20,12 @@
   font-size: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 5% 0;
+}
+
+/* Error Message */
+#error{
+  background-color: #E47F77;
+  width: 50%;
+  margin: 20px auto;
+  font-size: 20px;
 }
