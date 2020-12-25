@@ -2,7 +2,7 @@ $(function(){
   // declare variables
   var myArray, inputLength, counter, action;
   var reading = false;
-  var frequency = 1000;
+  var frequency = 200;
 
   // hide buttons, sliders, word reader, and error message
   $("#new").hide();
@@ -101,6 +101,27 @@ $(function(){
   });
   
   // Change Speed
+  $("#speedslider").on("slidestop", function(event, ui){
+    // refresh slider
+    $(this).slider("refresh");
+
+    // get value of the slider
+    var slidervalue = parseInt($(this).val());
+
+    // change speed text to match speed of words
+    $("#speed").text(slidervalue);
+
+    // stop reading
+    clearInterval(action);
+
+    // change frequency
+    frequency = 60000/slidervalue
+
+    // resume reading if in reading mode
+    if(reading){
+      action = setInterval(read, frequency);
+    }
+  });
 
   // Progress Slider
 
