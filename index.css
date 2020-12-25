@@ -1,0 +1,35 @@
+/********************
+ Home Page 
+********************/
+/* Background Image */
+#page1{
+  background: url("https://cdn.pixabay.com/photo/2017/05/10/15/05/himalayas-2301040_960_720.jpg") center center fixed;
+  background-size: 100% 100%;
+  color: #ffff;
+  text-align: center;
+  font-family: 'Lobster Two', cursive;
+}
+
+/* Font Size, Speed, and Progress Sliders */
+.full-width-slider input{
+  display: none !important;
+}
+
+.full-width-slider, .ui-slider-track{
+  margin-left: 15px;
+}
+
+/* Word Reader */
+#result{
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5% 0;
+}
+
+/* Error Message */
+#error{
+  background-color: #E47F77;
+  width: 50%;
+  margin: 20px auto;
+  font-size: 20px;
+}
