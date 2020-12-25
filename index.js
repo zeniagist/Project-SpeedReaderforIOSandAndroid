@@ -95,6 +95,9 @@ $(function(){
 
     // change font size of text
     $("#reader").css("fontSize", slidervalue);
+
+    // change font size text to match font size
+    $("#fontsize").text(slidervalue);
   });
   
   // Change Speed
