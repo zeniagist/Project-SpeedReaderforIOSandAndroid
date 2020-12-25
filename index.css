@@ -10,9 +10,13 @@
   font-family: 'Lobster Two', cursive;
 }
 
-/* Font Size and Speed Sliders */
+/* Font Size, Speed, and Progress Sliders */
 .full-width-slider input{
   display: none !important;
+}
+
+.full-width-slider, .ui-slider-track{
+  margin-left: 15px;
 }
 
 /* Word Reader */
