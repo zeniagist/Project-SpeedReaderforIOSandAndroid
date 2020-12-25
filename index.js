@@ -54,10 +54,37 @@ $(function(){
   });
 
   // Click on New
+  $("#new").click(function(){
+    // reload page 
+    location.reload();
+  });
 
   // Click on Pause
+  $("#pause").click(function(){
+    // stop reading
+    clearInterval(action);
+
+    // switch off reading mode
+    reading = false;
+
+    // hide pause and show resume
+    $("#pause").hide();
+    $("#resume").show();
+  });
 
   // Click on Resume
+  $("#resume").click(function(){
+    // start reading
+    action = setInterval(read, frequency);
+
+    // switch on reading mode
+    reading = true;
+
+    // hide resume and show pause
+    $("#pause").show();
+    $("#resume").hide();
+  });
+
 
   // Change Font Size
   
@@ -65,7 +92,9 @@ $(function(){
 
   // Progress Slider
 
-  // functions
+  /*************
+    Functions 
+  **************/
 
   // read user input text
   function read(){
